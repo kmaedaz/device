@@ -23,6 +23,7 @@
 #include "timer.h"
 #include "commands.h"
 #include "log.h"
+#include "config.h"
 
 extern GSwifi gs;
 extern Keys keys;
@@ -498,6 +499,10 @@ void irkit_http_on_timer() {
 
 void irkit_http_loop() {
     // long poll
+    if (!config::useCloudControl) {
+        // Cloud control is currently disabled. No polling loop.
+        return;
+    }
     if (TIMER_FIRED(polling_timer)) {
         TIMER_STOP(polling_timer);
 
