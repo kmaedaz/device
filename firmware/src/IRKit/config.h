@@ -21,7 +21,7 @@
  * Exposes some general options for your IRKit device.
  */
 namespace config {
-
+/*
     // Different modes for the LED feedback.
     typedef enum {
         LED_VERBOSE    = 0, // LED almost always-on to indicate the device status.
@@ -32,7 +32,7 @@ namespace config {
 
     // Defines what kind of LED profile you want.
     const LedFeedbackProfile ledFeedback = LED_QUIET;
-
+*/
     // Enables/disables cloud-control through the "deviceapi.getirkit.com" server.
     // If you use your IRKit device exclusively over your LAN, you can disable
     // this option: the device won't send regular polling requests to the cloud server.
